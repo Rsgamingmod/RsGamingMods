@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090713">
+<title>RS Gaming Mod</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;background:#090713;color:white;
+  font-family:Arial,Helvetica,sans-serif
+}
+header{
+  text-align:center;padding:24px 12px 35px;
+  background:radial-gradient(ellipse at center,#24103a,#090713 75%);
+  border-bottom:1px solid #30213d
+}
+.brand{
+  margin:0;font-size:clamp(30px,7vw,52px);
+  font-weight:900;
+  background:linear-gradient(90deg,#ff1680,#ff9e37,#ffe04a,#00e5ff,#ad45ff,#ff1680);
+  background-size:300% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:colors 9s linear infinite
+}
+@keyframes colors{to{background-position:300% 0}}
+.tagline{font-size:clamp(14px,4vw,23px);color:#d7d2e7;margin:23px 0 14px}
+.subtitle{color:#c8bfd9;font-size:16px}
+main{max-width:1050px;margin:auto;padding:30px 14px}
+.search{
+  width:100%;padding:18px 20px;border-radius:25px;
+  border:1px solid #51406a;background:#151122;color:white;
+  font-size:17px;margin-bottom:38px;outline:none
+}
+.search:focus{border-color:#00dfff}
+.games{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.game{
+  min-width:0;border:1px solid #3c3153;border-radius:30px;
+  background:linear-gradient(145deg,#171426,#100d1b);
+  padding:22px 12px 26px;text-align:center
+}
+.game h2{font-size:clamp(22px,5vw,36px);color:#00dfff;margin:14px 0 28px}
+.game:nth-child(2) h2{color:#00dfff}
+.profile{
+  display:block;width:100%;max-width:260px;aspect-ratio:1;
+  object-fit:cover;margin:0 auto 28px;border-radius:22px;
+  background:#100d1b
+}
+.categories{display:grid;grid-template-columns:1fr;gap:20px}
+.category{
+  width:100%;min-height:138px;padding:18px 9px;
+  border:4px solid transparent;border-radius:23px;
+  background:
+    linear-gradient(#100d1b,#100d1b) padding-box,
+    linear-gradient(120deg,#db42ed,#7766ff,#00dfff) border-box;
+  color:white;font-size:clamp(14px,3.4vw,20px);
+  font-weight:900;line-height:1.65;cursor:pointer;
+  overflow-wrap:anywhere
+}
+.category:active{transform:scale(.98)}
+.section-title{font-size:23px}
+.panel{
+  margin-top:20px;padding:20px;border:1px solid #49345f;
+  border-radius:20px;background:#151122
+}
+.back{
+  padding:12px 17px;border:1px solid #55436b;border-radius:12px;
+  background:#211832;color:white;cursor:pointer
+}
+.version{
+  width:100%;display:flex;justify-content:space-between;align-items:center;
+  text-align:left;padding:19px 14px;margin-top:13px;border-radius:15px;
+  border:1px solid #57406e;background:#100d1b;color:white;cursor:pointer
+}
+.version strong{font-size:18px}
+.version span{color:#00dfff;font-size:22px}
+.mod-title{text-align:center;font-size:clamp(27px,6vw,42px);overflow-wrap:anywhere}
+.video-wrap{position:relative;aspect-ratio:16/9;background:#000;margin-top:20px}
+.video-wrap iframe{position:absolute;width:100%;height:100%;inset:0;border:0}
+.download{
+  display:block;max-width:360px;width:100%;margin:24px auto 0;
+  padding:18px;text-align:center;text-decoration:none;
+  background:linear-gradient(90deg,#00dfff,#50ffbd);
+  color:#061018;border-radius:15px;font-size:22px;font-weight:900
+}
+.download-note{text-align:center;color:#c6bdd6;font-size:12px}
+.empty{text-align:center;color:#c6bdd6;padding:15px}
+footer{text-align:center;color:#8f849f;padding:25px}
+[hidden]{display:none!important}
+@media(min-width:650px){
+  .categories{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .game{padding:25px}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1 class="brand">RS GAMING MOD</h1>
+  <p class="tagline">BUSSID &amp; BUSSIN Mods Easy And Fast Download</p>
+  <div class="subtitle">Gaming Mods · Versions · Video · Downloads</div>
+</header>
+
+<main>
+  <input id="search" class="search" type="search"
+    placeholder="🔎 Search mods, categories, versions..."
+    aria-label="Search mods">
+
+  <section id="home">
+    <div class="games">
+      <div class="game">
+        <!-- BUSSID PROFILE IMAGE -->
+        <h2>🚌 BUSSID</h2>
+        <img class="profile"
+          src="https://raw.githubusercontent.com/Rsgamingmod/RsGamingMod-/main/unnamed%20(2).png"
+          alt="BUSSID profile image">
+
+        <div id="bussidCategories" class="categories"></div>
+      </div>
+
+      <div class="game">
+        <!-- BUSSIN PROFILE IMAGE -->
+        <h2>🚍 BUSSIN</h2>
+        <img class="profile"
+          src="https://raw.githubusercontent.com/Rsgamingmod/RsGamingMod-/main/unnamed%20(1).png"
+          alt="BUSSIN profile image">
+
+        <div id="bussinCategories" class="categories"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="results" hidden>
+    <button class="back" onclick="goHome()">← HOME</button>
+    <div id="resultContent"></div>
+  </section>
+</main>
+
+<footer>RS Gaming Mod</footer>
+
+<script>
+const categories=[
+  "REALISTIC RAIN 🌧️⛈️ MOD",
+  "STEERING WHEEL MOD",
+  "WHEEL CAP MOD",
+  "GARAGE MOD"
+];
+
+const mods=[
+  {
+    id:"steering-wheel-v4-5-2",
+    game:"bussid",
+    category:"STEERING WHEEL MOD",
+    version:"v4.5.2",
+    name:"ASHOK LEYLAND STEERING WHEEL PACK",
+    video:"7lbKLJHIqeo?si=IlNLC2K7yhaUkoep",
+    download:"https://sharemods.com/1ysqyf4rvjgz/Bussid_V4.5.2_Top_4_Steering_Wheel_Mod.7z.html"
+  },
+  {
+    id:"steering-wheel-v4-6",
+    game:"bussid",
+    category:"STEERING WHEEL MOD",
+    version:"v4.6",
+    name:"ASHOK LEYLAND STEERING WHEEL PACK",
+    video:"eZfmXlZqSEU",
+    download:"https://sharemods.com/8yf6gh81ry69/ASHOK_LEYLAND_STEERING_WHEEL_PACK.7z.html"
+  }
+];
+
+const $=id=>document.getElementById(id);
+
+function esc(s){
+  return String(s).replace(/[&<>"']/g,c=>({
+    "&":"&amp;","<":"&lt;",">":"&gt;",
+    '"':"&quot;","'":"&#39;"
+  }[c]));
+}
+
+function slug(s){
+  return s.toLowerCase().replace(/[^a-z0-9]+/g,"-")
+    .replace(/^-|-$/g,"");
+}
+
+function goHome(){
+  location.hash="/";
+}
+
+function openCategory(game,category){
+  location.hash="/category/"+game+"/"+slug(category);
+}
+
+function openMod(id){
+  location.hash="/mod/"+encodeURIComponent(id);
+}
+
+function categoryHTML(game,query=""){
+  return categories.filter(c=>
+    (game+" "+c).toLowerCase().includes(query.toLowerCase())
+  ).map(c=>`
+    <button class="category"
+      data-category="${esc(c)}" data-game="${game}">
+      ${esc(c)}
+    </button>
+  `).join("");
+}
+
+function bindCategories(){
+  document.querySelectorAll("[data-category]").forEach(b=>{
+    b.onclick=()=>openCategory(b.dataset.game,b.dataset.category);
+  });
+}
+
+function renderHome(){
+  $("home").hidden=false;
+  $("results").hidden=true;
+  $("bussidCategories").innerHTML=categoryHTML("bussid");
+  $("bussinCategories").innerHTML=categoryHTML("bussin");
+  bindCategories();
+}
+
+function renderCategory(game,categorySlug){
+  const category=categories.find(c=>slug(c)===categorySlug);
+  if(!category)return notFound();
+
+  const list=mods.filter(m=>
+    m.game===game && m.category===category
+  );
+  const versions=[...new Set(list.map(m=>m.version))];
+
+  $("home").hidden=true;
+  $("results").hidden=false;
+  $("resultContent").innerHTML=`
+    <h2 class="section-title">${game.toUpperCase()}</h2>
+    <div class="panel">
+      <h2>${esc(category)}</h2>
+      <p>Available Versions</p>
+      ${versions.length?versions.map(v=>`
+        <button class="version" data-version="${esc(v)}">
+          <strong>${esc(v)}</strong><span>›</span>
+        </button>
+      `).join(""):'<p class="empty">No versions uploaded yet.</p>'}
+    </div>`;
+
+  document.querySelectorAll("[data-version]").forEach(b=>{
+    b.onclick=()=>{
+      const mod=list.find(m=>m.version===b.dataset.version);
+      if(mod)openMod(mod.id);
+    };
+  });
+}
+
+function renderMod(id){
+  const mod=mods.find(m=>m.id===id);
+  if(!mod)return notFound();
+
+  $("home").hidden=true;
+  $("results").hidden=false;
+  $("resultContent").innerHTML=`
+    <div class="panel">
+      <h1 class="mod-title">${esc(mod.name)}</h1>
+      <p style="text-align:center;color:#c6bdd6">
+        ${mod.game.toUpperCase()} · ${esc(mod.version)}
+      </p>
+      <h2 style="text-align:center">VIDEO</h2>
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(mod.video)}"
+          title="Mod video"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+      </div>
+      <a class="download" href="${esc(mod.download)}"
+        target="_blank" rel="noopener noreferrer">DOWNLOAD</a>
+      <p class="download-note">Click On Download</p>
+    </div>`;
+}
+
+function notFound(){
+  $("home").hidden=true;
+  $("results").hidden=false;
+  $("resultContent").innerHTML=`
+    <div class="panel">
+      <h2>Page not found</h2>
+      <button class="back" onclick="goHome()">← HOME</button>
+    </div>`;
+}
+
+function route(){
+  const parts=decodeURIComponent(location.hash.slice(1))
+    .split("/").filter(Boolean);
+
+  if(!parts.length)return renderHome();
+
+  if(parts[0]==="category" &&
+     ["bussid","bussin"].includes(parts[1]) && parts[2]){
+    return renderCategory(parts[1],parts[2]);
+  }
+
+  if(parts[0]==="mod" && parts[1])return renderMod(parts[1]);
+
+  renderHome();
+}
+
+$("search").addEventListener("input",e=>{
+  const q=e.target.value.trim().toLowerCase();
+  if(!q){
+    if(!location.hash || location.hash==="#/")renderHome();
+    return;
+  }
+
+  const found=mods.filter(m=>
+    [m.name,m.game,m.category,m.version].join(" ")
+      .toLowerCase().includes(q)
+  );
+
+  $("home").hidden=true;
+  $("results").hidden=false;
+  $("resultContent").innerHTML=`
+    <h2 class="section-title">Search Results</h2>
+    ${found.length?found.map(m=>`
+      <button class="version" data-mod="${esc(m.id)}">
+        <strong>${esc(m.name)}</strong>
+        <span>${esc(m.version)}</span>
+      </button>
+    `).join(""):'<p class="empty">No mods found.</p>'}`;
+
+  document.querySelectorAll("[data-mod]").forEach(b=>{
+    b.onclick=()=>openMod(b.dataset.mod);
+  });
+});
+
+window.addEventListener("hashchange",route);
+renderHome();
+route();
+</script>
+</body>
+</html>

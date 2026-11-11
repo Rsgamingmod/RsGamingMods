@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,21 +8,18 @@
 
 <style>
 *{box-sizing:border-box}
-
 body{
   margin:0;
   background:#090711;
   color:white;
   font-family:Arial,Helvetica,sans-serif;
 }
-
 header{
   text-align:center;
   padding:38px 12px 46px;
   border-bottom:1px solid #30243e;
   background:radial-gradient(ellipse at center,#211032 0%,#090711 75%);
 }
-
 .brand{
   font-size:clamp(30px,7vw,52px);
   font-weight:900;
@@ -35,44 +31,21 @@ header{
   color:transparent;
   animation:rainbow 9s linear infinite;
 }
-
-@keyframes rainbow{
-  to{background-position:300% 0}
-}
-
-.tagline{
-  font-size:clamp(15px,3.8vw,27px);
-  color:#c7c2d4;
-  margin:0 0 16px;
-}
-
+@keyframes rainbow{to{background-position:300% 0}}
+.tagline{font-size:clamp(15px,3.8vw,27px);color:#c7c2d4;margin:0 0 16px}
 .subline{color:#c5bfd2;font-size:16px}
-
-main{
-  max-width:1100px;
-  margin:auto;
-  padding:32px 14px 50px;
-}
-
+main{max-width:1100px;margin:auto;padding:32px 14px 50px}
 .search{
-  width:100%;
-  padding:18px 20px;
-  margin-bottom:38px;
-  border:1px solid #514064;
-  border-radius:25px;
-  background:#151120;
-  color:white;
-  font-size:18px;
+  width:100%;padding:18px 20px;margin-bottom:38px;
+  border:1px solid #514064;border-radius:25px;
+  background:#151120;color:white;font-size:18px;
 }
-
 .search:focus{outline:1px solid #c54cff}
-
 .games{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:26px;
 }
-
 .game-card{
   min-width:0;
   padding:24px 12px;
@@ -80,255 +53,116 @@ main{
   border-radius:30px;
   background:linear-gradient(160deg,#191629,#100e1b);
 }
-
 .game-title{
-  text-align:center;
-  font-size:clamp(21px,4.5vw,36px);
-  margin:12px 0 30px;
-  color:#00d9ff;
-  font-weight:900;
+  text-align:center;font-size:clamp(21px,4.5vw,36px);
+  margin:12px 0 30px;color:#00d9ff;font-weight:900;
 }
-
 .profile{
-  display:block;
-  width:100%;
-  max-width:260px;
-  aspect-ratio:1;
-  object-fit:cover;
-  margin:0 auto 30px;
-  border-radius:24px;
+  display:block;width:100%;max-width:260px;
+  aspect-ratio:1;object-fit:cover;
+  margin:0 auto 30px;border-radius:24px;
   background:#171321;
 }
-
 .category{
-  display:block;
-  width:100%;
-  min-height:138px;
-  margin:20px 0;
-  padding:20px 8px;
-  border:4px solid transparent;
-  border-radius:24px;
+  display:block;width:100%;min-height:138px;
+  margin:20px 0;padding:20px 8px;
+  border:4px solid transparent;border-radius:24px;
   background:
     linear-gradient(#100e1b,#100e1b) padding-box,
     linear-gradient(130deg,#e348fa,#a56bff,#00d9ff) border-box;
-  color:#fff;
-  font-size:clamp(13px,2.7vw,21px);
-  font-weight:900;
-  text-align:center;
-  overflow-wrap:anywhere;
-  cursor:pointer;
+  color:#fff;font-size:clamp(13px,2.7vw,21px);
+  font-weight:900;text-align:center;
+  overflow-wrap:anywhere;cursor:pointer;
 }
-
 .category:hover{filter:brightness(1.2)}
-
 .panel{
-  margin-top:20px;
-  padding:22px;
-  border:1px solid #40314f;
-  border-radius:22px;
+  margin-top:20px;padding:22px;
+  border:1px solid #40314f;border-radius:22px;
   background:#151120;
 }
-
 .back{
-  padding:12px 17px;
-  border-radius:12px;
-  background:#282039;
-  color:white;
-  border:1px solid #514064;
-  cursor:pointer;
+  padding:12px 17px;border-radius:12px;
+  background:#282039;color:white;
+  border:1px solid #514064;cursor:pointer;
 }
-
-.page-title{
-  text-align:center;
-  font-size:clamp(23px,5vw,36px);
-  overflow-wrap:anywhere;
-}
-
+.page-title{text-align:center;font-size:clamp(23px,5vw,36px);overflow-wrap:anywhere}
 .version{
-  display:block;
-  width:100%;
-  padding:20px;
-  margin-top:14px;
-  border:2px solid #67427e;
-  border-radius:15px;
-  background:#21192e;
-  color:white;
-  text-align:center;
-  font-size:20px;
-  font-weight:bold;
-  cursor:pointer;
+  display:block;width:100%;padding:20px;margin-top:14px;
+  border:2px solid #67427e;border-radius:15px;
+  background:#21192e;color:white;text-align:center;
+  font-size:20px;font-weight:bold;cursor:pointer;
 }
-
 .version:hover{border-color:#00d9ff}
-
 .video{
-  width:100%;
-  aspect-ratio:16/9;
-  border:0;
-  border-radius:15px;
-  background:#000;
+  width:100%;aspect-ratio:16/9;
+  border:0;border-radius:15px;background:#000;
   margin:12px 0 20px;
 }
-
-.watch-warning{
-  text-align:center;
-  color:#ff3030;
-  font-size:15px;
-  font-weight:900;
-  animation:blink 1s infinite;
-}
-
-@keyframes blink{
-  50%{opacity:.25}
-}
-
-.timer-box{
-  margin:15px 0;
-  padding:18px;
-  text-align:center;
-  border:1px solid #514064;
-  border-radius:15px;
-  background:#21192e;
-}
-
-.timer-text{
-  font-size:18px;
-  font-weight:bold;
-}
-
-.progress-bg{
-  width:100%;
-  height:12px;
-  margin-top:14px;
-  border-radius:20px;
-  background:#090711;
-  overflow:hidden;
-}
-
-.progress-fill{
-  height:100%;
-  width:0%;
-  border-radius:20px;
-  background:linear-gradient(90deg,#00d9ff,#39ffb0);
-  transition:width .3s;
-}
-
 .download{
-  display:block;
-  max-width:360px;
-  width:100%;
-  margin:20px auto 0;
-  padding:18px;
-  border-radius:14px;
-  text-align:center;
+  display:block;max-width:360px;width:100%;
+  margin:20px auto 0;padding:18px;
+  border-radius:14px;text-align:center;
   background:linear-gradient(90deg,#00dcff,#39ffb0);
-  color:#071018;
-  font-size:22px;
-  font-weight:900;
-  border:0;
-  cursor:pointer;
+  color:#071018;font-size:22px;font-weight:900;
+  text-decoration:none;
 }
-
-.download:disabled{
-  background:#55515f;
-  color:#aaa;
-  cursor:not-allowed;
-}
-
-.download.unlocked{
-  animation:glow 1.5s infinite alternate;
-}
-
-@keyframes glow{
-  from{box-shadow:0 0 5px #00dcff}
-  to{box-shadow:0 0 22px #39ffb0}
-}
-
-.download-note{
-  text-align:center;
-  color:#c7c2d4;
-  font-size:12px;
-}
-
-.empty{
-  text-align:center;
-  color:#c7c2d4;
-  padding:20px;
-}
-
-footer{
-  text-align:center;
-  padding:25px;
-  color:#aaa0ba;
-  font-size:13px;
-}
-
+.download-note{text-align:center;color:#c7c2d4;font-size:12px}
+.empty{text-align:center;color:#c7c2d4;padding:20px}
+footer{text-align:center;padding:25px;color:#aaa0ba;font-size:13px}
 [hidden]{display:none!important}
-
 @media(max-width:360px){
   .games{gap:10px}
   .game-card{padding:18px 8px}
-  .category{
-    min-height:115px;
-    font-size:12px;
-    padding:12px 4px;
-  }
+  .category{min-height:115px;font-size:12px;padding:12px 4px}
   .game-title{font-size:20px}
 }
 </style>
 </head>
 
 <body>
-
 <header>
   <h1 class="brand">RS GAMING MOD</h1>
-  <p class="tagline">
-    Bussid &amp; Bussin Mods Easy And Fast Download
-  </p>
-  <div class="subline">
-    Gaming Mods · Versions · Video · Downloads
-  </div>
+  <p class="tagline">Bussid &amp; Bussin Mods Easy And Fast Download</p>
+  <div class="subline">Gaming Mods · Versions · Video · Downloads</div>
 </header>
 
 <main>
+  <input id="search" class="search" type="search"
+    placeholder="🔎 Search mods, categories, versions..."
+    aria-label="Search mods">
 
-<input id="search"
-  class="search"
-  type="search"
-  placeholder="🔎 Search mods, categories, versions..."
-  aria-label="Search mods">
+  <section id="home">
+    <div class="games">
 
-<section id="home">
-  <div class="games">
+      <div class="game-card">
+        <h2 class="game-title">🚌 BUSSID</h2>
 
-    <div class="game-card">
-      <h2 class="game-title">🚌 BUSSID</h2>
+        <img class="profile"
+          src="https://raw.githubusercontent.com/Rsgamingmod/RsGamingMods/main/unnamed%20(2).png"
+          alt="BUSSID Profile"
+          onerror="this.alt='BUSSID profile image unavailable'">
 
-      <img class="profile"
-        src="https://raw.githubusercontent.com/Rsgamingmod/RsGamingMods/main/unnamed%20(2).png"
-        alt="BUSSID Profile">
+        <div class="category-list" data-game="bussid"></div>
+      </div>
 
-      <div class="category-list" data-game="bussid"></div>
+      <div class="game-card">
+        <h2 class="game-title">🚌 BUSSIN</h2>
+
+        <img class="profile"
+          src="https://raw.githubusercontent.com/Rsgamingmod/RsGamingMods/main/unnamed%20(1).png"
+          alt="BUSSIN Profile"
+          onerror="this.alt='BUSSIN profile image unavailable'">
+
+        <div class="category-list" data-game="bussin"></div>
+      </div>
+
     </div>
+  </section>
 
-    <div class="game-card">
-      <h2 class="game-title">🚌 BUSSIN</h2>
-
-      <img class="profile"
-        src="https://raw.githubusercontent.com/Rsgamingmod/RsGamingMods/main/unnamed%20(1).png"
-        alt="BUSSIN Profile">
-
-      <div class="category-list" data-game="bussin"></div>
-    </div>
-
-  </div>
-</section>
-
-<section id="results" hidden>
-  <button class="back" onclick="goHome()">← HOME</button>
-  <div id="resultContent"></div>
-</section>
-
+  <section id="results" hidden>
+    <button class="back" onclick="goHome()">← HOME</button>
+    <div id="resultContent"></div>
+  </section>
 </main>
 
 <footer>RS Gaming Mod</footer>
@@ -342,93 +176,66 @@ const categories=[
   "GARAGE MOD"
 ];
 
-/* ADD YOUR MODS HERE */
-
+/*
+  ADD NEW MODS HERE.
+  Each mod needs a unique ID.
+  IDs appear in the URL but are not displayed as page text.
+*/
 const mods=[
-
-{
-  id:"steering-wheel-v4-5-2",
-  game:"bussid",
-  category:"STEERING WHEEL MOD",
-  version:"v4.5.2",
-  name:"ASHOK LEYLAND STEERING WHEEL PACK",
-  video:"7lbKLJHIqeo",
-  download:"https://sharemods.com/1ysqyf4rvjgz/Bussid_V4.5.2_Top_4_Steering_Wheel_Mod.7z.html"
-},
-
-{
-  id:"steering-wheel-v4-6",
-  game:"bussid",
-  category:"STEERING WHEEL MOD",
-  version:"v4.6",
-  name:"STEERING WHEEL MOD",
-  video:"eZfmXlZqSEU",
-  download:"https://sharemods.com/8yf6gh81ry69/ASHOK_LEYLAND_STEERING_WHEEL_PACK.7z.html"
-},
-
-{
-  id:"head-light-mod-v4-6",
-  game:"bussid",
-  category:"REALISTIC HEAD LIGHT MOD",
-  version:"v4.6",
-  name:"TOP 4 HEAD LIGHT MOD",
-  video:"PknC64-Q9vI",
-  download:"https://sharemods.com/4easg3xtscsq/BUSSID_V4.6_HEAD_LIGHT_PACK_FILE_RSGAMINGMOD.7z.html"
-},
-
-{
-  id:"Rain-v4.6",
-  game:"bussid",
-  category:"REALISTIC RAIN 🌧️⛈️ MOD",
-  version:"v4.6",
-  name:"BUSSID v4.6 REALISTIC RAIN MOD",
-  video:"ZdRzJ6JpxyA",
-  download:"https://sharemods.com/0miatohmdtg5/BUSSID_v4.6_REALISTIC_RAIN________________MOD.7z.html"
-},
-
   {
-  id: "steering-wheel-4-6-1",
+    id:"steering-wheel-v4-5-2",
+    game:"bussid",
+    category:"STEERING WHEEL MOD",
+    version:"v4.5.2",
+    name:"ASHOK LEYLAND STEERING WHEEL PACK",
+    video:"7lbKLJHIqeo",
+    download:"https://sharemods.com/1ysqyf4rvjgz/Bussid_V4.5.2_Top_4_Steering_Wheel_Mod.7z.html"
+  },
+  {
+    id:"steering-wheel-v4-6",
+    game:"bussid",
+    category:"STEERING WHEEL MOD",
+    version:"v4.6",
+    name:"STEERING WHEEL MOD",
+    video:"eZfmXlZqSEU",
+    download:"https://sharemods.com/8yf6gh81ry69/ASHOK_LEYLAND_STEERING_WHEEL_PACK.7z.html"
+  },
+  {
+  id: "head-light-mod-v4-6",
   game: "bussid",
-  category: "STEERING WHEEL MOD",
-  version: "v4.6.1",
-  name: "MY NEW STEERING WHEEL MOD",
-  video: "Z8ssW6H1Ygs",
-  download: "https://sharemods.com/ynpvvig9pwtt/v4.6.1_Steering_Wheel_Pack_Bussid.7z.html"
+  category: "REALISTIC HEAD LIGHT MOD",
+  version: "v4.6",
+  name: "TOP 4 HEAD LIGHT MOD",
+  video: "PknC64-Q9vI",
+  download: "https://sharemods.com/4easg3xtscsq/BUSSID_V4.6_HEAD_LIGHT_PACK_FILE_RSGAMINGMOD.7z.html"
+  },
+  {
+  id: "Rain-v4.6",
+  game: "bussid",
+  category: "REALISTIC RAIN 🌧️⛈️ MOD",
+  version: "v4.6",
+  name: "BUSSID v4.6 REALISTIC RAIN MOD",
+  video: "ZdRzJ6JpxyA",
+  download: "https://sharemods.com/0miatohmdtg5/BUSSID_v4.6_REALISTIC_RAIN________________MOD.7z.html"
   },
 
   {
-  id: "wheel-cap-v4-6-1",
+  id: "steering-wheel-v4-6-1",
   game: "bussid",
   category: "STEERING WHEEL MOD",
   version: "v4.6.1",
   name: "NEW STEERING WHEEL MOD",
   video: "Z8ssW6H1Ygs",
   download: "https://sharemods.com/ynpvvig9pwtt/v4.6.1_Steering_Wheel_Pack_Bussid.7z.html"
-},
+  },
 ];
-
-/* GLOBAL SETTINGS */
-
-const REQUIRED_SECONDS=30;
 
 const $=id=>document.getElementById(id);
 
-let ytPlayer=null;
-let watchInterval=null;
-let watchedSeconds=0;
-let lastVideoTime=null;
-let unlocked=false;
-let currentMod=null;
-let playerReady=false;
-let playerGeneration=0;
-
 function esc(value){
   return String(value).replace(/[&<>"']/g,c=>({
-    "&":"&amp;",
-    "<":"&lt;",
-    ">":"&gt;",
-    '"':"&quot;",
-    "'":"&#39;"
+    "&":"&amp;","<":"&lt;",">":"&gt;",
+    '"':"&quot;","'":"&#39;"
   }[c]));
 }
 
@@ -438,9 +245,7 @@ function slug(text){
     .replace(/^-|-$/g,"");
 }
 
-function goHome(){
-  location.hash="/";
-}
+function goHome(){location.hash="/";}
 
 function openCategory(game,category){
   location.hash="/category/"+game+"/"+slug(category);
@@ -450,19 +255,12 @@ function openMod(id){
   location.hash="/mod/"+encodeURIComponent(id);
 }
 
-/* HOME PAGE */
-
 function renderHome(){
-
-  stopVideoTimer();
-
   $("home").hidden=false;
   $("results").hidden=true;
 
   document.querySelectorAll(".category-list").forEach(list=>{
-
     const game=list.dataset.game;
-
     list.innerHTML=categories.map(category=>`
       <button class="category"
         data-game="${game}"
@@ -470,33 +268,22 @@ function renderHome(){
         ${esc(category)}
       </button>
     `).join("");
-
   });
 
   document.querySelectorAll("[data-category]").forEach(button=>{
     button.onclick=()=>openCategory(
-      button.dataset.game,
-      button.dataset.category
+      button.dataset.game,button.dataset.category
     );
   });
 }
 
-/* SHOW PAGE */
-
 function showPage(html){
-
   $("home").hidden=true;
   $("results").hidden=false;
-
   $("resultContent").innerHTML=html;
 }
 
-/* GAME PAGE */
-
 function renderGame(game){
-
-  stopVideoTimer();
-
   showPage(`
     <div class="panel">
       <h2 class="page-title">${game.toUpperCase()}</h2>
@@ -505,7 +292,6 @@ function renderGame(game){
   `);
 
   const list=document.querySelector("#resultContent .category-list");
-
   list.innerHTML=categories.map(category=>`
     <button class="category"
       data-game="${game}"
@@ -516,20 +302,13 @@ function renderGame(game){
 
   list.querySelectorAll("[data-category]").forEach(button=>{
     button.onclick=()=>openCategory(
-      button.dataset.game,
-      button.dataset.category
+      button.dataset.game,button.dataset.category
     );
   });
 }
 
-/* CATEGORY PAGE */
-
 function renderCategory(game,categorySlug){
-
-  stopVideoTimer();
-
   const category=categories.find(c=>slug(c)===categorySlug);
-
   if(!category)return notFound();
 
   const list=mods.filter(m=>
@@ -541,507 +320,117 @@ function renderCategory(game,categorySlug){
   showPage(`
     <div class="panel">
       <h2 class="page-title">${esc(category)}</h2>
-
-      ${versions.length ? versions.map(version=>`
+      ${versions.length?versions.map(version=>`
         <button class="version" data-version="${esc(version)}">
           ${esc(version)}
         </button>
-      `).join("") : `
-        <p class="empty">No versions uploaded yet.</p>
-      `}
+      `).join(""):'<p class="empty">No versions uploaded yet.</p>'}
     </div>
   `);
 
   document.querySelectorAll("[data-version]").forEach(button=>{
-
     button.onclick=()=>{
       const mod=list.find(m=>m.version===button.dataset.version);
       if(mod)openMod(mod.id);
     };
-
   });
 }
 
-/* STOP AND CLEANUP VIDEO */
-
-function stopVideoTimer(){
-
-  playerGeneration++;
-
-  if(watchInterval){
-    clearInterval(watchInterval);
-    watchInterval=null;
-  }
-
-  if(ytPlayer){
-    try{
-      ytPlayer.destroy();
-    }catch(e){}
-    ytPlayer=null;
-  }
-
-  playerReady=false;
-  lastVideoTime=null;
-  watchedSeconds=0;
-  unlocked=false;
-  currentMod=null;
-}
-
-/* VIDEO API */
-
-function loadYouTubeAPI(){
-
-  if(window.YT && window.YT.Player){
-    return Promise.resolve();
-  }
-
-  return new Promise(resolve=>{
-
-    window.onYouTubeIframeAPIReady=()=>{
-      resolve();
-    };
-
-    if(!document.getElementById("youtube-api")){
-
-      const script=document.createElement("script");
-      script.id="youtube-api";
-      script.src="https://www.youtube.com/iframe_api";
-
-      document.head.appendChild(script);
-
-    }
-
-  });
-}
-
-/* MOD PAGE */
-
-async function renderMod(id){
-
-  stopVideoTimer();
-
+function renderMod(id){
   const mod=mods.find(m=>m.id===id);
-
   if(!mod)return notFound();
-
-  currentMod=mod;
-
-  const generation=playerGeneration;
 
   showPage(`
     <div class="panel">
-
       <h1 class="page-title">${esc(mod.name)}</h1>
-
       <p class="empty">
-        ${mod.game.toUpperCase()} ·
-        ${esc(mod.category)} ·
-        ${esc(mod.version)}
+        ${mod.game.toUpperCase()} · ${esc(mod.category)} · ${esc(mod.version)}
       </p>
 
       <h2 class="page-title">WATCH FULL VIDEO</h2>
+      <iframe class="video"
+        src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(mod.video)}"
+        title="Mod video"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
 
-      <div id="videoContainer">
-        <iframe
-          id="modVideo"
-          class="video"
-          src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(mod.video)}?enablejsapi=1&rel=0"
-          title="Mod video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
-      </div>
+      <a class="download"
+        href="${esc(mod.download)}"
+        target="_blank"
+        rel="noopener noreferrer">DOWNLOAD</a>
 
-      <p class="watch-warning">
-       WATCH THIS VIDEO 30 SECOND AND UNLOCK YOUR DOWNLOAD LINK 
-       DON'T PAUSE OR SKIP THE VIDEO
-      </p>
-
-      <p class="watch-warning">
-        ಈ ಮೇಲಿನ ವಿಡಿಯೋ 30 ಸೆಕೆಂಡ್ ವೀಕ್ಷಿಸಿ ನಂತರ ನಿಮ್ಮ ಡೌನ್ಲೋಡ್ ಲಿಂಕ್ ತೆರೆಯುತ್ತದೆ 
-        ವಿಡಿಯೋವನ್ನು PAUSE ಮಾಡಬೇಡಿ ಅಥವಾ SKIP ಮಾಡಬೇಡಿ.
-      </p>
-
-      <div class="timer-box">
-
-        <div id="timerText" class="timer-text">
-          Loading video...
-        </div>
-
-        <div class="progress-bg">
-          <div id="progressFill" class="progress-fill"></div>
-        </div>
-
-      </div>
-
-      <button
-        id="downloadBtn"
-        class="download"
-        type="button"
-        disabled>
-        🔒 DOWNLOAD LOCKED
-      </button>
-
-      <p id="downloadNote" class="download-note">
-        Watch 30 seconds of video to unlock download.
-      </p>
-
+      <p class="download-note">Click On Download</p>
     </div>
   `);
-
-  const downloadBtn=$("downloadBtn");
-
-  downloadBtn.onclick=()=>{
-
-    if(!unlocked || !currentMod)return;
-
-    window.open(
-      currentMod.download,
-      "_blank",
-      "noopener,noreferrer"
-    );
-
-  };
-
-  try{
-
-    await loadYouTubeAPI();
-
-    if(generation!==playerGeneration)return;
-
-    const iframe=$("modVideo");
-
-    if(!iframe)return;
-
-    ytPlayer=new YT.Player(iframe,{
-      events:{
-        onReady:onPlayerReady,
-        onStateChange:onPlayerStateChange,
-        onError:onPlayerError
-      }
-    });
-
-  }catch(error){
-
-    if(generation!==playerGeneration)return;
-
-    $("timerText").textContent=
-      "Video loading failed. Please refresh.";
-
-  }
-
 }
-
-/* PLAYER READY */
-
-function onPlayerReady(){
-
-  playerReady=true;
-
-  if($("timerText")){
-    $("timerText").textContent=
-      "0 / 30 seconds watched";
-  }
-
-  startVideoTimer();
-
-}
-
-/* VIDEO STATE */
-
-function onPlayerStateChange(event){
-
-  if(event.data===YT.PlayerState.PLAYING){
-
-    try{
-      lastVideoTime=ytPlayer.getCurrentTime();
-    }catch(e){
-      lastVideoTime=null;
-    }
-
-  }else{
-
-    lastVideoTime=null;
-
-  }
-
-}
-
-/* VIDEO ERROR */
-
-function onPlayerError(){
-
-  if($("timerText")){
-    $("timerText").textContent=
-      "Unable to load video. Please try again.";
-  }
-
-}
-
-/* WATCH TIMER */
-
-function startVideoTimer(){
-
-  if(watchInterval){
-    clearInterval(watchInterval);
-  }
-
-  watchInterval=setInterval(()=>{
-
-    if(!playerReady || !ytPlayer || unlocked)return;
-
-    if(!currentMod)return;
-
-    const text=$("timerText");
-    const progress=$("progressFill");
-
-    if(!text || !progress)return;
-
-    let state;
-
-    try{
-      state=ytPlayer.getPlayerState();
-    }catch(e){
-      return;
-    }
-
-    /* COUNT ONLY WHILE VIDEO IS PLAYING */
-
-    if(state!==YT.PlayerState.PLAYING){
-
-      lastVideoTime=null;
-
-      text.textContent=
-        "Paused · "+Math.floor(watchedSeconds)+
-        " / "+REQUIRED_SECONDS+" seconds";
-
-      return;
-    }
-
-    let currentTime;
-
-    try{
-      currentTime=ytPlayer.getCurrentTime();
-    }catch(e){
-      return;
-    }
-
-    if(lastVideoTime===null){
-
-      lastVideoTime=currentTime;
-      return;
-
-    }
-
-    const difference=currentTime-lastVideoTime;
-
-    /*
-      A large jump means the viewer has
-      skipped or seeked through the video.
-      Do not count that jump as watch time.
-    */
-
-    if(difference>0 && difference<=1.25){
-
-      watchedSeconds+=Math.min(difference,0.75);
-
-    }
-
-    lastVideoTime=currentTime;
-
-    if(watchedSeconds>REQUIRED_SECONDS){
-      watchedSeconds=REQUIRED_SECONDS;
-    }
-
-    const remaining=Math.ceil(
-      REQUIRED_SECONDS-watchedSeconds
-    );
-
-    const percentage=
-      (watchedSeconds/REQUIRED_SECONDS)*100;
-
-    progress.style.width=percentage+"%";
-
-    if(watchedSeconds>=REQUIRED_SECONDS){
-
-      unlockDownload();
-      return;
-
-    }
-
-    text.textContent=
-      "Watch "+remaining+" more seconds to unlock download";
-
-  },500);
-
-}
-
-/* UNLOCK DOWNLOAD */
-
-function unlockDownload(){
-
-  if(unlocked)return;
-
-  unlocked=true;
-
-  if(watchInterval){
-    clearInterval(watchInterval);
-    watchInterval=null;
-  }
-
-  const button=$("downloadBtn");
-  const text=$("timerText");
-  const note=$("downloadNote");
-  const progress=$("progressFill");
-
-  if(!button || !text)return;
-
-  button.disabled=false;
-
-  button.classList.add("unlocked");
-
-  button.innerHTML="🔓 DOWNLOAD NOW";
-
-  text.textContent="✓ VIDEO WATCH COMPLETED!";
-
-  if(progress){
-    progress.style.width="100%";
-  }
-
-  if(note){
-    note.textContent="Your download is unlocked. Click DOWNLOAD NOW.";
-  }
-
-}
-
-/* NOT FOUND */
 
 function notFound(){
-
-  stopVideoTimer();
-
   showPage(`
     <div class="panel">
-
       <h2 class="page-title">Page not found</h2>
-
-      <p class="empty">
-        Please return to the home page.
-      </p>
-
-      <button class="back" onclick="goHome()">
-        ← HOME
-      </button>
-
+      <p class="empty">Please return to the home page.</p>
+      <button class="back" onclick="goHome()">← HOME</button>
     </div>
   `);
-
 }
 
-/* URL ROUTING */
-
 function route(){
-
   const parts=decodeURIComponent(location.hash.slice(1))
-    .split("/")
-    .filter(Boolean);
+    .split("/").filter(Boolean);
 
   if(!parts.length)return renderHome();
 
   if(parts[0]==="game" &&
-    ["bussid","bussin"].includes(parts[1])){
-
+     ["bussid","bussin"].includes(parts[1])){
     return renderGame(parts[1]);
-
   }
 
   if(parts[0]==="category" &&
-    ["bussid","bussin"].includes(parts[1]) &&
-    parts[2]){
-
+     ["bussid","bussin"].includes(parts[1]) && parts[2]){
     return renderCategory(parts[1],parts[2]);
-
   }
 
   if(parts[0]==="mod" && parts[1]){
-
     return renderMod(parts[1]);
-
   }
 
   notFound();
-
 }
 
-/* SEARCH */
-
 $("search").addEventListener("input",event=>{
-
   const query=event.target.value.trim().toLowerCase();
 
   if(!query){
-
-    if(!location.hash || location.hash==="#/"){
-      renderHome();
-    }else{
-      route();
-    }
-
+    if(!location.hash || location.hash==="#/")renderHome();
+    else route();
     return;
   }
 
   const matches=mods.filter(m=>
-    [
-      m.name,
-      m.game,
-      m.category,
-      m.version
-    ].join(" ").toLowerCase().includes(query)
+    [m.name,m.game,m.category,m.version]
+      .join(" ").toLowerCase().includes(query)
   );
-
-  stopVideoTimer();
 
   showPage(`
     <h2 class="page-title">Search Results</h2>
-
-    ${matches.length ? matches.map(m=>`
-
+    ${matches.length?matches.map(m=>`
       <button class="version" data-mod="${esc(m.id)}">
-
         ${esc(m.name)}<br>
-
-        <small>
-          ${m.game.toUpperCase()} · ${esc(m.version)}
-        </small>
-
+        <small>${m.game.toUpperCase()} · ${esc(m.version)}</small>
       </button>
-
-    `).join("") : `
-      <p class="empty">No mods found.</p>
-    `}
-
+    `).join(""):'<p class="empty">No mods found.</p>'}
   `);
 
   document.querySelectorAll("[data-mod]").forEach(button=>{
-
-    button.onclick=()=>{
-      $("search").value="";
-      openMod(button.dataset.mod);
-    };
-
+    button.onclick=()=>openMod(button.dataset.mod);
   });
-
 });
 
-/* START WEBSITE */
-
 window.addEventListener("hashchange",route);
-
 renderHome();
 route();
-
 </script>
-
 </body>
-</html>
+  </html>

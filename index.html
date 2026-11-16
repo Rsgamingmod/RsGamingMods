@@ -126,6 +126,20 @@ main{max-width:1100px;margin:auto;padding:32px 14px 50px}
 footer{text-align:center;padding:25px;color:#aaa0ba;font-size:13px}
 [hidden]{display:none!important}
 
+  /* MAIN CATEGORY COLOUR ANIMATION ONLY */
+
+.category {
+  animation: categoryColor 6s linear infinite;
+}
+
+@keyframes categoryColor {
+  0%   { filter: hue-rotate(0deg); }
+  25%  { filter: hue-rotate(90deg); }
+  50%  { filter: hue-rotate(180deg); }
+  75%  { filter: hue-rotate(270deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
 @media(max-width:360px){
   .games{gap:10px}
   .game-card{padding:18px 8px}

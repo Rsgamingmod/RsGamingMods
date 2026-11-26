@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,21 +9,27 @@
 <style>
 *{box-sizing:border-box}
 body{
-  margin:0;background:#090711;color:white;
+  margin:0;
+  background:#090711;
+  color:white;
   font-family:Arial,Helvetica,sans-serif;
 }
 header{
-  text-align:center;padding:38px 12px 46px;
+  text-align:center;
+  padding:38px 12px 46px;
   border-bottom:1px solid #30243e;
   background:radial-gradient(ellipse at center,#211032 0%,#090711 75%);
 }
 .brand{
   font-size:clamp(30px,7vw,52px);
-  font-weight:900;margin:0 0 24px;
+  font-weight:900;
+  margin:0 0 24px;
   background:linear-gradient(90deg,#ff258b,#ff913b,#ffe04b,#36edcc,#25aaff,#d34dff,#ff258b);
   background-size:300% 100%;
-  -webkit-background-clip:text;background-clip:text;
-  color:transparent;animation:rainbow 9s linear infinite;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:rainbow 9s linear infinite;
 }
 @keyframes rainbow{to{background-position:300% 0}}
 .tagline{font-size:clamp(15px,3.8vw,27px);color:#c7c2d4;margin:0 0 16px}
@@ -36,10 +41,16 @@ main{max-width:1100px;margin:auto;padding:32px 14px 50px}
   background:#151120;color:white;font-size:18px;
 }
 .search:focus{outline:1px solid #c54cff}
-.games{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.games{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:26px;
+}
 .game-card{
-  min-width:0;padding:24px 12px;
-  border:1px solid #40314f;border-radius:30px;
+  min-width:0;
+  padding:24px 12px;
+  border:1px solid #40314f;
+  border-radius:30px;
   background:linear-gradient(160deg,#191629,#100e1b);
 }
 .game-title{
@@ -47,27 +58,23 @@ main{max-width:1100px;margin:auto;padding:32px 14px 50px}
   margin:12px 0 30px;color:#00d9ff;font-weight:900;
 }
 .profile{
-  display:block;width:100%;max-width:260px;aspect-ratio:1;
-  object-fit:cover;margin:0 auto 30px;border-radius:24px;
+  display:block;width:100%;max-width:260px;
+  aspect-ratio:1;object-fit:cover;
+  margin:0 auto 30px;border-radius:24px;
   background:#171321;
 }
 .category{
   display:block;width:100%;min-height:138px;
   margin:20px 0;padding:20px 8px;
   border:4px solid transparent;border-radius:24px;
-  background:linear-gradient(#100e1b,#100e1b) padding-box,
-  linear-gradient(130deg,#e348fa,#a56bff,#00d9ff) border-box;
+  background:
+    linear-gradient(#100e1b,#100e1b) padding-box,
+    linear-gradient(130deg,#e348fa,#a56bff,#00d9ff) border-box;
   color:#fff;font-size:clamp(13px,2.7vw,21px);
-  font-weight:900;text-align:center;overflow-wrap:anywhere;cursor:pointer;
+  font-weight:900;text-align:center;
+  overflow-wrap:anywhere;cursor:pointer;
 }
 .category:hover{filter:brightness(1.2)}
-.category.livery{
-  min-height:110px;
-  max-width:95%;
-  margin:20px auto;
-  background:linear-gradient(#171020,#171020) padding-box,
-  linear-gradient(130deg,#ff258b,#ffe04b,#00d9ff) border-box;
-}
 .panel{
   margin-top:20px;padding:22px;
   border:1px solid #40314f;border-radius:22px;
@@ -78,10 +85,7 @@ main{max-width:1100px;margin:auto;padding:32px 14px 50px}
   background:#282039;color:white;
   border:1px solid #514064;cursor:pointer;
 }
-.page-title{
-  text-align:center;font-size:clamp(23px,5vw,36px);
-  overflow-wrap:anywhere;
-}
+.page-title{text-align:center;font-size:clamp(23px,5vw,36px);overflow-wrap:anywhere}
 .version{
   display:block;width:100%;padding:20px;margin-top:14px;
   border:2px solid #67427e;border-radius:15px;
@@ -89,25 +93,6 @@ main{max-width:1100px;margin:auto;padding:32px 14px 50px}
   font-size:20px;font-weight:bold;cursor:pointer;
 }
 .version:hover{border-color:#00d9ff}
-
-.mod-card{
-  margin:16px 0;padding:20px;
-  border:1px solid #67427e;border-radius:17px;
-  background:linear-gradient(145deg,#21192e,#151120);
-  text-align:center;
-}
-.mod-name{
-  font-size:20px;font-weight:900;
-  overflow-wrap:anywhere;margin:8px 0 15px;
-}
-.mod-open{
-  width:100%;padding:15px;
-  border:1px solid #00d9ff;border-radius:12px;
-  background:#21192e;color:#fff;
-  font-size:16px;font-weight:bold;cursor:pointer;
-}
-.mod-open:hover{background:#302044}
-
 .video{
   width:100%;aspect-ratio:16/9;
   border:0;border-radius:15px;background:#000;
@@ -125,49 +110,6 @@ main{max-width:1100px;margin:auto;padding:32px 14px 50px}
 .empty{text-align:center;color:#c7c2d4;padding:20px}
 footer{text-align:center;padding:25px;color:#aaa0ba;font-size:13px}
 [hidden]{display:none!important}
-
-  /* INDIAN FLAG MULTI COLOUR GLOW */
-
-.category {
-  border: 4px solid transparent;
-
-  background:
-    linear-gradient(#100e1b, #100e1b) padding-box,
-    linear-gradient(
-      120deg,
-      #FF9933,
-      #FFFFFF,
-      #138808,
-      #FF9933
-    ) border-box;
-
-  background-size: 100% 100%, 300% 300%;
-
-  animation: indiaGlow 4s ease-in-out infinite;
-
-  box-shadow:
-    0 0 8px #FF9933,
-    0 0 12px #FFFFFF,
-    0 0 18px #138808;
-}
-
-@keyframes indiaGlow {
-  0%, 100% {
-    background-position: 0 0, 0% 50%;
-    box-shadow:
-      0 0 12px #FF9933,
-      0 0 15px #FFFFFF,
-      0 0 20px #138808;
-  }
-
-  50% {
-    background-position: 0 0, 100% 50%;
-    box-shadow:
-      0 0 20px #FF9933,
-      0 0 22px #FFFFFF,
-      0 0 25px #138808;
-  }
-
 @media(max-width:360px){
   .games{gap:10px}
   .game-card{padding:18px 8px}
@@ -178,7 +120,6 @@ footer{text-align:center;padding:25px;color:#aaa0ba;font-size:13px}
 </head>
 
 <body>
-
 <header>
   <h1 class="brand">RS GAMING MOD</h1>
   <p class="tagline">Bussid &amp; Bussin Mods Easy And Fast Download</p>
@@ -186,522 +127,320 @@ footer{text-align:center;padding:25px;color:#aaa0ba;font-size:13px}
 </header>
 
 <main>
+  <input id="search" class="search" type="search"
+    placeholder="🔎 Search mods, categories, versions..."
+    aria-label="Search mods">
 
-<input id="search" class="search" type="search"
-placeholder="🔎 Search mods, categories, versions..."
-aria-label="Search mods">
+  <section id="home">
+    <div class="games">
 
-<section id="home">
-<div class="games">
+      <div class="game-card">
+        <h2 class="game-title">🚌 BUSSID</h2>
 
-<div class="game-card">
-<h2 class="game-title">🚌 BUSSID</h2>
-<img class="profile"
-src="https://raw.githubusercontent.com/Rsgamingmod/RsGamingMods/main/unnamed%20(2).png"
-alt="BUSSID Profile">
-<div class="category-list" data-game="bussid"></div>
-</div>
+        <img class="profile"
+          src="https://raw.githubusercontent.com/Rsgamingmod/RsGamingMods/main/unnamed%20(2).png"
+          alt="BUSSID Profile"
+          onerror="this.alt='BUSSID profile image unavailable'">
 
-<div class="game-card">
-<h2 class="game-title">🚌 BUSSIN</h2>
-<img class="profile"
-src="https://raw.githubusercontent.com/Rsgamingmod/RsGamingMods/main/unnamed%20(1).png"
-alt="BUSSIN Profile">
-<div class="category-list" data-game="bussin"></div>
-</div>
+        <div class="category-list" data-game="bussid"></div>
+      </div>
 
-</div>
-</section>
+      <div class="game-card">
+        <h2 class="game-title">🚌 BUSSIN</h2>
 
-<section id="results" hidden>
-<button class="back" onclick="goHome()">← HOME</button>
-<div id="resultContent"></div>
-</section>
+        <img class="profile"
+          src="https://raw.githubusercontent.com/Rsgamingmod/RsGamingMods/main/unnamed%20(1).png"
+          alt="BUSSIN Profile"
+          onerror="this.alt='BUSSIN profile image unavailable'">
 
+        <div class="category-list" data-game="bussin"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="results" hidden>
+    <button class="back" onclick="goHome()">← HOME</button>
+    <div id="resultContent"></div>
+  </section>
 </main>
 
 <footer>RS Gaming Mod</footer>
 
 <script>
-
-// ==================================
-// CATEGORIES
-// ==================================
-
 const categories=[
-"REALISTIC RAIN 🌧️⛈️ MOD",
-"HORN 🔊🔊SOUND MOD",
-"REALISTIC HEAD LIGHT MOD",
-"STEERING WHEEL MOD",
-"WHEEL CAP MOD",
-"GARAGE MOD",
-"LIVERY'S BUSSID/N"
+  "REALISTIC RAIN 🌧️⛈️ MOD",
+  "REALISTIC HEAD LIGHT MOD",
+  "STEERING WHEEL MOD",
+  "WHEEL CAP MOD",
+  "GARAGE MOD"
 ];
 
-// ==================================
-// ADD YOUR MODS HERE
-// ==================================
-
+/*
+  ADD NEW MODS HERE.
+  Each mod needs a unique ID.
+  IDs appear in the URL but are not displayed as page text.
+*/
 const mods=[
-
-{
-id:"steering-wheel-v4-5-2",
-game:"bussid",
-category:"STEERING WHEEL MOD",
-version:"v4.5.2",
-name:"ASHOK LEYLAND STEERING WHEEL PACK",
-video:"7lbKLJHIqeo",
-download:"https://sharemods.com/1ysqyf4rvjgz/Bussid_V4.5.2_Top_4_Steering_Wheel_Mod.7z.html"
-},
-
-{
-id:"steering-wheel-v4-6",
-game:"bussid",
-category:"STEERING WHEEL MOD",
-version:"v4.6",
-name:"STEERING WHEEL MOD",
-video:"eZfmXlZqSEU",
-download:"https://sharemods.com/8yf6gh81ry69/ASHOK_LEYLAND_STEERING_WHEEL_PACK.7z.html"
-},
-
-{
-id:"head-light-mod-v4-6",
-game:"bussid",
-category:"REALISTIC HEAD LIGHT MOD",
-version:"v4.6",
-name:"TOP 4 HEAD LIGHT MOD",
-video:"PknC64-Q9vI",
-download:"https://sharemods.com/4easg3xtscsq/BUSSID_V4.6_HEAD_LIGHT_PACK_FILE_RSGAMINGMOD.7z.html"
-},
-
-{
-id:"Rain-v4.6",
-game:"bussid",
-category:"REALISTIC RAIN 🌧️⛈️ MOD",
-version:"v4.6",
-name:"BUSSID v4.6 REALISTIC RAIN MOD",
-video:"ZdRzJ6JpxyA",
-download:"https://sharemods.com/0miatohmdtg5/BUSSID_v4.6_REALISTIC_RAIN________________MOD.7z.html"
-},
-
-{
-id:"steering-wheel-v4-6-1",
-game:"bussid",
-category:"STEERING WHEEL MOD",
-version:"v4.6.1",
-name:"NEW STEERING WHEEL MOD",
-video:"Z8ssW6H1Ygs",
-download:"https://sharemods.com/ynpvvig9pwtt/v4.6.1_Steering_Wheel_Pack_Bussid.7z.html"
-},
-
-{
-id:"Rain-Mod-v4-6-1",
-game:"bussid",
-category:"REALISTIC RAIN 🌧️⛈️ MOD",
-version:"v4.6.1",
-name:"REALISTIC RAIN MOD",
-video:"YOUR_YOUTUBE_VIDEO_ID",
-download:"https://sharemods.com/wg7bedji08in/BUSSID_v4.6.1_REALISTIC_RAIN________________MOD.7z.html"
-},
-
   {
-  id: "Horn-Sound-Mod-v4-6-1",
-  game: "bussid",
-  category: "HORN 🔊🔊SOUND MOD",
-  version: "v4.6.1",
-  name: " HORN SOUND MOD PART-01",
-  video: "UHrjD1Cg4Fc",
-  download: "https://sharemods.com/2c2353r6btpz/BUSSID_V4.6.1_HORN_MOD_PART_1.7z.html"
+    id:"steering-wheel-v4-5-2",
+    game:"bussid",
+    category:"STEERING WHEEL MOD",
+    version:"v4.5.2",
+    name:"ASHOK LEYLAND STEERING WHEEL PACK",
+    video:"7lbKLJHIqeo",
+    download:"https://sharemods.com/1ysqyf4rvjgz/Bussid_V4.5.2_Top_4_Steering_Wheel_Mod.7z.html"
   },
-
   {
-  id: "Steering-Wheel-Mod-v4-7-1",
+    id:"steering-wheel-v4-6",
+    game:"bussid",
+    category:"STEERING WHEEL MOD",
+    version:"v4.6",
+    name:"STEERING WHEEL MOD",
+    video:"eZfmXlZqSEU",
+    download:"https://sharemods.com/8yf6gh81ry69/ASHOK_LEYLAND_STEERING_WHEEL_PACK.7z.html"
+  },
+  {
+  id: "head-light-mod-v4-6",
   game: "bussid",
-  category: "STEERING WHEEL MOD",
-  version: "v4.7.1",
-  name: "TOP 3 STEERING WHEEL MOD",
-  video: "O1l0bW6hFFM",
-  download: "https://sharemods.com/9b3p8u2o25k6/BUSSID_V4.7.1_STEERING_WHEEL_PACK.7z.html"
+  category: "REALISTIC HEAD LIGHT MOD",
+  version: "v4.6",
+  name: "TOP 4 HEAD LIGHT MOD",
+  video: "PknC64-Q9vI",
+  download: "https://sharemods.com/4easg3xtscsq/BUSSID_V4.6_HEAD_LIGHT_PACK_FILE_RSGAMINGMOD.7z.html"
+  },
+  {
+  id: "Rain-v4.6",
+  game: "bussid",
+  category: "REALISTIC RAIN 🌧️⛈️ MOD",
+  version: "v4.6",
+  name: "BUSSID v4.6 REALISTIC RAIN MOD",
+  video: "ZdRzJ6JpxyA",
+  download: "https://sharemods.com/0miatohmdtg5/BUSSID_v4.6_REALISTIC_RAIN________________MOD.7z.html"
   },
   
+  {
+  id: "steering-wheel-v4-6-1",
+  game: "bussid",
+  category: "STEERING WHEEL MOD",
+  version: "v4.6.1",
+  name: "NEW STEERING WHEEL MOD",
+  video: "Z8ssW6H1Ygs",
+  download: "https://sharemods.com/ynpvvig9pwtt/v4.6.1_Steering_Wheel_Pack_Bussid.7z.html"
+  },
+  
+  {
+  id: "Rain-Mod-v4-6-1",
+  game: "bussid",
+  category: "REALISTIC RAIN 🌧️⛈️ MOD",
+  version: "v4.6.1",
+  name: "REALISTIC RAIN 🌧️⛈️ MOD",
+  video: "YOUR_YOUTUBE_VIDEO_ID",
+  download: "https://sharemods.com/wg7bedji08in/BUSSID_v4.6.1_REALISTIC_RAIN________________MOD.7z.html"
+  },
 ];
-
-// ==================================
-// BASIC FUNCTIONS
-// ==================================
 
 const $=id=>document.getElementById(id);
 
 function esc(value){
-return String(value).replace(/[&<>"']/g,c=>({
-"&":"&amp;",
-"<":"&lt;",
-">":"&gt;",
-'"':"&quot;",
-"'":"&#39;"
-}[c]));
+  return String(value).replace(/[&<>"']/g,c=>({
+    "&":"&amp;","<":"&lt;",">":"&gt;",
+    '"':"&quot;","'":"&#39;"
+  }[c]));
 }
 
 function slug(text){
-return text.toLowerCase()
-.replace(/[^a-z0-9]+/g,"-")
-.replace(/^-|-$/g,"");
+  return text.toLowerCase()
+    .replace(/[^a-z0-9]+/g,"-")
+    .replace(/^-|-$/g,"");
 }
 
-function goHome(){
-location.hash="/";
-}
+function goHome(){location.hash="/";}
 
 function openCategory(game,category){
-location.hash="/category/"+game+"/"+slug(category);
-}
-
-function openVersion(game,category,version){
-location.hash="/version/"+game+"/"+slug(category)+"/"+slug(version);
+  location.hash="/category/"+game+"/"+slug(category);
 }
 
 function openMod(id){
-location.hash="/mod/"+encodeURIComponent(id);
+  location.hash="/mod/"+encodeURIComponent(id);
+}
+
+function renderHome(){
+  $("home").hidden=false;
+  $("results").hidden=true;
+
+  document.querySelectorAll(".category-list").forEach(list=>{
+    const game=list.dataset.game;
+    list.innerHTML=categories.map(category=>`
+      <button class="category"
+        data-game="${game}"
+        data-category="${esc(category)}">
+        ${esc(category)}
+      </button>
+    `).join("");
+  });
+
+  document.querySelectorAll("[data-category]").forEach(button=>{
+    button.onclick=()=>openCategory(
+      button.dataset.game,button.dataset.category
+    );
+  });
 }
 
 function showPage(html){
-$("home").hidden=true;
-$("results").hidden=false;
-$("resultContent").innerHTML=html;
+  $("home").hidden=true;
+  $("results").hidden=false;
+  $("resultContent").innerHTML=html;
 }
-
-// ==================================
-// HOME PAGE
-// ==================================
-
-function renderHome(){
-
-$("home").hidden=false;
-$("results").hidden=true;
-
-document.querySelectorAll(".category-list").forEach(list=>{
-
-const game=list.dataset.game;
-
-list.innerHTML=categories.map(category=>`
-<button class="category ${category==="LIVERY'S BUSSID/N"?"livery":""}"
-data-game="${game}"
-data-category="${esc(category)}">
-${esc(category)}
-</button>
-`).join("");
-
-});
-
-document.querySelectorAll("[data-category]").forEach(button=>{
-
-button.onclick=()=>openCategory(
-button.dataset.game,
-button.dataset.category
-);
-
-});
-
-}
-
-// ==================================
-// GAME PAGE
-// ==================================
 
 function renderGame(game){
+  showPage(`
+    <div class="panel">
+      <h2 class="page-title">${game.toUpperCase()}</h2>
+      <div class="category-list" data-game="${game}"></div>
+    </div>
+  `);
 
-showPage(`
-<div class="panel">
-<h2 class="page-title">${game.toUpperCase()}</h2>
-<div class="category-list" data-game="${game}"></div>
-</div>
-`);
+  const list=document.querySelector("#resultContent .category-list");
+  list.innerHTML=categories.map(category=>`
+    <button class="category"
+      data-game="${game}"
+      data-category="${esc(category)}">
+      ${esc(category)}
+    </button>
+  `).join("");
 
-const list=document.querySelector("#resultContent .category-list");
-
-list.innerHTML=categories.map(category=>`
-<button class="category ${category==="LIVERY'S BUSSID/N"?"livery":""}"
-data-game="${game}"
-data-category="${esc(category)}">
-${esc(category)}
-</button>
-`).join("");
-
-list.querySelectorAll("[data-category]").forEach(button=>{
-button.onclick=()=>openCategory(
-button.dataset.game,
-button.dataset.category
-);
-});
-
+  list.querySelectorAll("[data-category]").forEach(button=>{
+    button.onclick=()=>openCategory(
+      button.dataset.game,button.dataset.category
+    );
+  });
 }
-
-// ==================================
-// CATEGORY PAGE - SHOW VERSIONS
-// ==================================
 
 function renderCategory(game,categorySlug){
+  const category=categories.find(c=>slug(c)===categorySlug);
+  if(!category)return notFound();
 
-const category=categories.find(c=>slug(c)===categorySlug);
+  const list=mods.filter(m=>
+    m.game===game && m.category===category
+  );
 
-if(!category)return notFound();
+  const versions=[...new Set(list.map(m=>m.version))];
 
-const list=mods.filter(m=>
-m.game===game && m.category===category
-);
+  showPage(`
+    <div class="panel">
+      <h2 class="page-title">${esc(category)}</h2>
+      ${versions.length?versions.map(version=>`
+        <button class="version" data-version="${esc(version)}">
+          ${esc(version)}
+        </button>
+      `).join(""):'<p class="empty">No versions uploaded yet.</p>'}
+    </div>
+  `);
 
-const versions=[...new Set(list.map(m=>m.version))];
-
-showPage(`
-<div class="panel">
-
-<h2 class="page-title">${esc(category)}</h2>
-
-${versions.length?versions.map(version=>`
-<button class="version"
-data-version="${esc(version)}">
-${esc(version)}
-</button>
-`).join(""):'<p class="empty">No versions uploaded yet.</p>'}
-
-</div>
-`);
-
-document.querySelectorAll("[data-version]").forEach(button=>{
-
-button.onclick=()=>openVersion(
-game,
-category,
-button.dataset.version
-);
-
-});
-
+  document.querySelectorAll("[data-version]").forEach(button=>{
+    button.onclick=()=>{
+      const mod=list.find(m=>m.version===button.dataset.version);
+      if(mod)openMod(mod.id);
+    };
+  });
 }
-
-// ==================================
-// MULTIPLE MODS SYSTEM
-// VERSION CLICK - SHOW ALL MODS
-// ==================================
-
-function renderVersion(game,categorySlug,versionSlug){
-
-const category=categories.find(c=>slug(c)===categorySlug);
-
-if(!category)return notFound();
-
-const allMods=mods.filter(m=>
-m.game===game &&
-m.category===category &&
-slug(m.version)===versionSlug
-);
-
-if(!allMods.length)return notFound();
-
-const version=allMods[0].version;
-
-showPage(`
-<div class="panel">
-
-<h2 class="page-title">${esc(version)}</h2>
-
-<p class="empty">${allMods.length} MODS AVAILABLE</p>
-
-<div id="multipleMods">
-
-${allMods.map((mod,index)=>`
-
-<div class="mod-card">
-
-<h3 class="mod-name">${esc(mod.name)}</h3>
-
-<button class="mod-open"
-data-mod="${esc(mod.id)}">
-
-<span style="display:block;font-size:25px;font-weight:900;">
-DOWNLOAD MOD
-</span>
-
-<span style="display:block;font-size:14px;color:#00d9ff;margin-top:6px;">
-PART ${index+1}
-</span>
-
-</button>
-
-</div>
-
-`).join("")}
-
-</div>
-</div>
-`);
-
-document.querySelectorAll("[data-mod]").forEach(button=>{
-
-button.onclick=()=>openMod(button.dataset.mod);
-
-});
-
-}
-
-// ==================================
-// MOD DETAILS PAGE
-// ==================================
 
 function renderMod(id){
+  const mod=mods.find(m=>m.id===id);
+  if(!mod)return notFound();
 
-const mod=mods.find(m=>m.id===id);
+  showPage(`
+    <div class="panel">
+      <h1 class="page-title">${esc(mod.name)}</h1>
+      <p class="empty">
+        ${mod.game.toUpperCase()} · ${esc(mod.category)} · ${esc(mod.version)}
+      </p>
 
-if(!mod)return notFound();
+      <h2 class="page-title">WATCH FULL VIDEO</h2>
+      <iframe class="video"
+        src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(mod.video)}"
+        title="Mod video"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
 
-showPage(`
-<div class="panel">
+      <a class="download"
+        href="${esc(mod.download)}"
+        target="_blank"
+        rel="noopener noreferrer">DOWNLOAD</a>
 
-<h1 class="page-title">${esc(mod.name)}</h1>
-
-<p class="empty">
-${mod.game.toUpperCase()} · ${esc(mod.category)} · ${esc(mod.version)}
-</p>
-
-<h2 class="page-title">VIDEO</h2>
-
-<iframe class="video"
-src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(mod.video)}"
-title="Mod video"
-loading="lazy"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-referrerpolicy="strict-origin-when-cross-origin"
-allowfullscreen></iframe>
-
-<a class="download"
-href="${esc(mod.download)}"
-target="_blank"
-rel="noopener noreferrer">
-DOWNLOAD
-</a>
-
-<p class="download-note">Click On Download</p>
-
-</div>
-`);
-
+      <p class="download-note">Click On Download</p>
+    </div>
+  `);
 }
-
-// ==================================
-// PAGE NOT FOUND
-// ==================================
 
 function notFound(){
-
-showPage(`
-<div class="panel">
-<h2 class="page-title">Page not found</h2>
-<p class="empty">Please return to the home page.</p>
-<button class="back" onclick="goHome()">← HOME</button>
-</div>
-`);
-
+  showPage(`
+    <div class="panel">
+      <h2 class="page-title">Page not found</h2>
+      <p class="empty">Please return to the home page.</p>
+      <button class="back" onclick="goHome()">← HOME</button>
+    </div>
+  `);
 }
-
-// ==================================
-// WEBSITE ROUTER
-// ==================================
 
 function route(){
+  const parts=decodeURIComponent(location.hash.slice(1))
+    .split("/").filter(Boolean);
 
-const parts=decodeURIComponent(location.hash.slice(1))
-.split("/").filter(Boolean);
+  if(!parts.length)return renderHome();
 
-if(!parts.length)return renderHome();
+  if(parts[0]==="game" &&
+     ["bussid","bussin"].includes(parts[1])){
+    return renderGame(parts[1]);
+  }
 
-if(parts[0]==="game" &&
-["bussid","bussin"].includes(parts[1])){
-return renderGame(parts[1]);
+  if(parts[0]==="category" &&
+     ["bussid","bussin"].includes(parts[1]) && parts[2]){
+    return renderCategory(parts[1],parts[2]);
+  }
+
+  if(parts[0]==="mod" && parts[1]){
+    return renderMod(parts[1]);
+  }
+
+  notFound();
 }
-
-if(parts[0]==="category" &&
-["bussid","bussin"].includes(parts[1]) &&
-parts[2]){
-return renderCategory(parts[1],parts[2]);
-}
-
-// NEW VERSION ROUTE
-
-if(parts[0]==="version" &&
-["bussid","bussin"].includes(parts[1]) &&
-parts[2] && parts[3]){
-return renderVersion(parts[1],parts[2],parts[3]);
-}
-
-if(parts[0]==="mod" && parts[1]){
-return renderMod(parts[1]);
-}
-
-notFound();
-
-}
-
-// ==================================
-// SEARCH SYSTEM
-// ==================================
 
 $("search").addEventListener("input",event=>{
+  const query=event.target.value.trim().toLowerCase();
 
-const query=event.target.value.trim().toLowerCase();
+  if(!query){
+    if(!location.hash || location.hash==="#/")renderHome();
+    else route();
+    return;
+  }
 
-if(!query){
+  const matches=mods.filter(m=>
+    [m.name,m.game,m.category,m.version]
+      .join(" ").toLowerCase().includes(query)
+  );
 
-if(!location.hash || location.hash==="#/"){
-renderHome();
-}else{
-route();
-}
+  showPage(`
+    <h2 class="page-title">Search Results</h2>
+    ${matches.length?matches.map(m=>`
+      <button class="version" data-mod="${esc(m.id)}">
+        ${esc(m.name)}<br>
+        <small>${m.game.toUpperCase()} · ${esc(m.version)}</small>
+      </button>
+    `).join(""):'<p class="empty">No mods found.</p>'}
+  `);
 
-return;
-}
-
-const matches=mods.filter(m=>
-[m.name,m.game,m.category,m.version]
-.join(" ").toLowerCase().includes(query)
-);
-
-showPage(`
-<h2 class="page-title">Search Results</h2>
-
-${matches.length?matches.map(m=>`
-
-<div class="mod-card">
-
-<h3 class="mod-name">${esc(m.name)}</h3>
-
-<p class="empty">
-${m.game.toUpperCase()} · ${esc(m.category)} · ${esc(m.version)}
-</p>
-
-<button class="mod-open" data-mod="${esc(m.id)}">
-OPEN MOD
-</button>
-
-</div>
-
-`).join(""):'<p class="empty">No mods found.</p>'}
-`);
-
-document.querySelectorAll("[data-mod]").forEach(button=>{
-button.onclick=()=>openMod(button.dataset.mod);
+  document.querySelectorAll("[data-mod]").forEach(button=>{
+    button.onclick=()=>openMod(button.dataset.mod);
+  });
 });
-
-});
-
-// ==================================
-// START WEBSITE
-// ==================================
 
 window.addEventListener("hashchange",route);
-
 renderHome();
 route();
-
 </script>
 </body>
-</html>
+          </html>
